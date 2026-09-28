@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, ArrowUp } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function FloatingWhatsApp() {
   const [showScroll, setShowScroll] = useState(false);
@@ -35,7 +36,7 @@ export default function FloatingWhatsApp() {
         className="floating-wa"
         aria-label="Chat on WhatsApp"
       >
-        <MessageCircle size={30} />
+        <WhatsAppIcon size={30} />
         <span className="floating-wa-tooltip">Quick Chat with Director</span>
       </a>
     </>

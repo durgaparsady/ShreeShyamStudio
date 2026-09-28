@@ -80,7 +80,7 @@ export default function Packages({ onSelectPackage }) {
             >
               {pkg.featured && (
                 <div className="featured-badge">
-                  <Star size={12} fill="#0b0c10" />
+                  <Star size={12} fill="#ffffff" color="#ffffff" />
                   <span>{pkg.badge}</span>
                 </div>
               )}

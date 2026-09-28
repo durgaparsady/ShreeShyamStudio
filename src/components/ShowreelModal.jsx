@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Play, Pause, Volume2 } from 'lucide-react';
+import { X, Play, Pause } from 'lucide-react';
 
 export default function ShowreelModal({ isOpen, onClose }) {
   const [isPlaying, setIsPlaying] = useState(true);

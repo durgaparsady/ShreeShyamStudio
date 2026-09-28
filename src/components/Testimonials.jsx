@@ -5,21 +5,21 @@ export default function Testimonials() {
   const reviews = [
     {
       id: 1,
-      names: 'Meera & Aarav Singhania',
-      meta: 'The Leela Palace, Udaipur • Married Dec 2025',
+      names: 'Mahima & Sanidhya yadav',
+      meta: 'The Leela Palace, Udaipur • Married Aug 2026',
       image: '/images/royal_wedding.jpg',
       quote: '“Shree Shyam Studio captured our Udaipur wedding in a way that feels straight out of a Sanjay Leela Bhansali movie! Watching our 18-minute film brings tears to everyone who sees it. Their team was discreet, polite, and calm throughout the chaos.”'
     },
     {
       id: 2,
-      names: 'Rhea & Siddharth Mehta',
+      names: 'Krishna & Sourabh kushwah',
       meta: 'W Goa Destination Wedding • Married Nov 2025',
       image: '/images/hero_wedding.jpg',
       quote: '“The 48-hour sneak-peek trailer literally blew up on Instagram! Our friends couldn’t believe the colors and drone angles of our Goa beach vows. When we received the Italian leather album, it felt like an heirloom our grandchildren will treasure.”'
     },
     {
       id: 3,
-      names: 'Ananya & Rohan Varma',
+      names: 'Roshni (laddoo) & Pratham Gupta',
       meta: 'Rambagh Palace, Jaipur • Married Jan 2026',
       image: '/images/haldi_sangeet.jpg',
       quote: '“As someone who is camera shy, I was nervous about posing. The Shree Shyam Studio team made us laugh naturally and captured genuine candid smiles during our Haldi. They are truly artists, not just camera operators. 10/10 recommend!”'

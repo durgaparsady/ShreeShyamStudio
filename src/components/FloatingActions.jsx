@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, Phone, ArrowUp } from 'lucide-react';
+import { Phone, ArrowUp } from 'lucide-react';
 import { STUDIO_CONFIG, getWhatsAppLink } from '../contactConfig';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function FloatingActions() {
   const [showScroll, setShowScroll] = useState(false);
@@ -66,7 +67,7 @@ export default function FloatingActions() {
         aria-label="Chat on WhatsApp"
         title="Instant WhatsApp Consultation"
       >
-        <MessageCircle size={26} />
+        <WhatsAppIcon size={26} />
         <span className="dock-tooltip main-tooltip">Chat with Studio Director</span>
       </a>
     </div>

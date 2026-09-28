@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
-import { ChevronsLeftRight, Sparkles, Sliders, Sun } from 'lucide-react';
+import { ChevronsLeftRight } from 'lucide-react';
 
 export default function BeforeAfterSlider() {
   const [sliderPos, setSliderPos] = useState(50);
@@ -73,7 +73,7 @@ export default function BeforeAfterSlider() {
             {/* Before Layer (Simulated RAW Flat Log) */}
             <div 
               className="img-layer before-layer"
-              style={{ width: `${sliderPos}%` }}
+              style={{ clipPath: `inset(0 calc(100% - ${sliderPos}%) 0 0)` }}
             >
               <img 
                 src="/images/hero_wedding.jpg" 

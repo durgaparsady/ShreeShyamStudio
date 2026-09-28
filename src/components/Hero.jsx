@@ -1,7 +1,7 @@
 import React from 'react';
-import { Play, ArrowRight, Star, Award, Film, Heart } from 'lucide-react';
+import { Play, ArrowRight, Star } from 'lucide-react';
 
-export default function Hero({ onOpenShowreel, onOpenBooking }) {
+export default function Hero({ onOpenShowreel, onOpenBooking: _onOpenBooking }) {
   return (
     <section className="hero-section" id="hero">
       <div 
@@ -37,7 +37,7 @@ export default function Hero({ onOpenShowreel, onOpenBooking }) {
             onClick={onOpenShowreel}
           >
             <div className="play-pulse">
-              <Play size={13} fill="#0b0c10" />
+              <Play size={13} fill="#ffffff" color="#ffffff" />
             </div>
             <span>Watch 2026 Showreel</span>
           </button>

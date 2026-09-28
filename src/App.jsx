@@ -118,6 +118,7 @@ export default function App() {
       />
 
       <BookingModal 
+        key={`${isBookingOpen}-${bookingPreset}`}
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}
         presetPackage={bookingPreset}
@@ -127,7 +128,7 @@ export default function App() {
       {/* Toast Notification */}
       <div className={`toast-notification ${toast.visible ? 'active' : ''}`}>
         <div className="toast-icon">
-          <CheckCircle2 size={20} color="#0b0c10" />
+          <CheckCircle2 size={20} color="#ffffff" />
         </div>
         <div className="toast-content">
           <div className="toast-title">{toast.title}</div>

@@ -13,7 +13,7 @@ export const STUDIO_CONFIG = {
   // Phone number for direct calls
   phone: '+919644746770',
   phoneClean: '+916263692215',
-  email: 'bookings@shreeshyamstudio.com',
+  email: 'prathamgupta@gmail.com',
 
   addressIndore: 'Gauri Nagar, Indore, Madhya Pradesh',
 };
