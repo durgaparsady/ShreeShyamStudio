@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, MessageCircle, ArrowRight, Menu, X } from 'lucide-react';
+import { Phone, ArrowRight, Menu, X } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function Navbar({ onOpenBooking }) {
   const [scrolled, setScrolled] = useState(false);
@@ -14,14 +15,14 @@ export default function Navbar({ onOpenBooking }) {
   }, []);
 
   const navLinks = [
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Cinematography', href: '#showreel' },
-    { name: 'Retouch Lab', href: '#retouch' },
-    { name: 'Packages', href: '#packages' },
-    { name: 'Quote Calculator', href: '#calculator' },
-    { name: 'Gear Arsenal', href: '#gear' },
-    { name: 'Reviews', href: '#testimonials' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'Portfolio', shortName: 'Portfolio', href: '#portfolio' },
+    { name: 'Cinematography', shortName: 'Films', href: '#showreel' },
+    { name: 'Retouch Lab', shortName: 'Retouch', href: '#retouch' },
+    { name: 'Packages', shortName: 'Packages', href: '#packages' },
+    { name: 'Quote Calculator', shortName: 'Pricing', href: '#calculator' },
+    { name: 'Gear Arsenal', shortName: 'Gear', href: '#gear' },
+    { name: 'Reviews', shortName: 'Reviews', href: '#testimonials' },
+    { name: 'FAQ', shortName: 'FAQ', href: '#faq' },
   ];
 
   return (
@@ -45,7 +46,7 @@ export default function Navbar({ onOpenBooking }) {
               rel="noopener noreferrer" 
               className="top-link top-wa"
             >
-              <MessageCircle size={13} />
+              <WhatsAppIcon size={14} />
               <span>Direct WhatsApp</span>
             </a>
           </div>
@@ -55,24 +56,24 @@ export default function Navbar({ onOpenBooking }) {
       {/* Primary Sticky Header */}
       <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
         <div className="container header-container">
-          <a href="#hero" className="brand-logo" aria-label="Shree Shyam Studios Home">
+          <a href="#hero" className="brand-logo" aria-label="Shree Shyam Studio Home">
             <div className="logo-mark">
               <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="20" cy="20" r="18" stroke="url(#goldGradNav)" strokeWidth="1.5"/>
-                <polygon points="20,10 27,15 27,25 20,30 13,25 13,15" stroke="#d4af37" strokeWidth="1.2" fill="none"/>
+                <polygon points="20,10 27,15 27,25 20,30 13,25 13,15" stroke="#b8860b" strokeWidth="1.2" fill="none"/>
                 <circle cx="20" cy="20" r="4.5" fill="url(#goldGradNav)"/>
                 <defs>
                   <linearGradient id="goldGradNav" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#f5df9b"/>
-                    <stop offset="0.5" stopColor="#d4af37"/>
-                    <stop offset="1" stopColor="#a67c1e"/>
+                    <stop stopColor="#d4a017"/>
+                    <stop offset="0.5" stopColor="#b8860b"/>
+                    <stop offset="1" stopColor="#875d0b"/>
                   </linearGradient>
                 </defs>
               </svg>
             </div>
-            <div class="logo-text">
+            <div className="logo-text">
               <span className="brand-name">SHREE SHYAM</span>
-              <span className="brand-sub">STUDIO &amp; CINEMA</span>
+              <span className="brand-sub">STUDIO</span>
             </div>
           </a>
 
@@ -80,7 +81,7 @@ export default function Navbar({ onOpenBooking }) {
           <nav className="nav-menu">
             {navLinks.map((link) => (
               <a key={link.name} href={link.href} className="nav-link">
-                {link.name}
+                <span>{link.shortName || link.name}</span>
               </a>
             ))}
           </nav>
@@ -88,11 +89,12 @@ export default function Navbar({ onOpenBooking }) {
           {/* Action Button */}
           <div className="header-actions">
             <button 
-              className="btn btn-gold btn-sm"
+              className="btn btn-gold btn-sm header-booking-btn"
               onClick={() => onOpenBooking()}
             >
-              <span>Check Availability</span>
-              <ArrowRight size={15} className="btn-arrow" />
+              <span className="btn-text-full">Check Availability</span>
+              <span className="btn-text-short">Book</span>
+              <ArrowRight size={14} className="btn-arrow" />
             </button>
 
             <button 
@@ -100,7 +102,7 @@ export default function Navbar({ onOpenBooking }) {
               onClick={() => setDrawerOpen(true)}
               aria-label="Toggle Navigation Menu"
             >
-              <Menu size={24} color="#ffffff" />
+              <Menu size={22} className="mobile-toggle-icon" />
             </button>
           </div>
         </div>
@@ -111,7 +113,7 @@ export default function Navbar({ onOpenBooking }) {
         <div className="drawer-header">
           <div className="logo-text">
             <span className="brand-name">SHREE SHYAM</span>
-            <span className="brand-sub">STUDIO &amp; CINEMA</span>
+            <span className="brand-sub">STUDIO</span>
           </div>
           <button 
             className="drawer-close"

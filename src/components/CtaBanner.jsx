@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight, MessageCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function CtaBanner({ onOpenBooking }) {
   return (
@@ -31,7 +32,7 @@ export default function CtaBanner({ onOpenBooking }) {
                 rel="noopener noreferrer" 
                 className="btn btn-whatsapp btn-lg"
               >
-                <MessageCircle size={18} />
+                <WhatsAppIcon size={20} />
                 <span>Instant WhatsApp Chat</span>
               </a>
             </div>

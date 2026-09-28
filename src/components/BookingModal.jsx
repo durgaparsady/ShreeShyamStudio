@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, ArrowRight, MessageCircle, CheckCircle } from 'lucide-react';
+import { X, ArrowRight } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function BookingModal({ isOpen, onClose, presetPackage, onShowToast }) {
@@ -10,22 +10,11 @@ export default function BookingModal({ isOpen, onClose, presetPackage, onShowToa
     eventType: 'Wedding (2-3 Days)',
     eventDate: '',
     location: '',
-    packagePreset: '',
+    packagePreset: presetPackage || 'The Royal Cinema Package (₹2,85,000)',
     message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  useEffect(() => {
-    if (presetPackage) {
-      setFormData(prev => ({ ...prev, packagePreset: presetPackage }));
-    } else {
-      setFormData(prev => ({
-        ...prev,
-        packagePreset: prev.packagePreset || 'The Royal Cinema Package (₹2,85,000)'
-      }));
-    }
-  }, [presetPackage, isOpen]);
 
   useEffect(() => {
     if (isOpen) {

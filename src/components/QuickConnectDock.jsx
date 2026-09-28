@@ -1,6 +1,7 @@
 import React from 'react';
-import { Phone, Mail, MessageCircle, ArrowUpRight } from 'lucide-react';
+import { Phone, Mail, ArrowUpRight } from 'lucide-react';
 import { STUDIO_CONFIG, getWhatsAppLink } from '../contactConfig';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function QuickConnectDock() {
   const contactChannels = [
@@ -30,7 +31,7 @@ export default function QuickConnectDock() {
       href: getWhatsAppLink(),
       target: '_blank',
       color: 'wa-green',
-      icon: <MessageCircle size={24} />
+      icon: <WhatsAppIcon size={24} />
     },
     {
       id: 'phone',

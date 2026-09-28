@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 
-export default function FAQ({ onOpenBooking }) {
+export default function FAQ({ onOpenBooking: _onOpenBooking }) {
   const [openIndex, setOpenIndex] = useState(0);
 
   const faqs = [

@@ -249,7 +249,7 @@ export default function CostCalculator({ onLockQuote }) {
                 </button>
 
                 <p className="summary-guarantee">
-                  <ShieldCheck size={18} color="#d4af37" />
+                  <ShieldCheck size={18} color="#b8860b" />
                   <span>100% Date Protection &amp; Backup Equipment Guarantee</span>
                 </p>
               </div>

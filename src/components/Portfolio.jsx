@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Maximize2, Sparkles } from 'lucide-react';
+import { Maximize2 } from 'lucide-react';
 
-export default function Portfolio({ onOpenLightbox, onOpenBooking }) {
+export default function Portfolio({ onOpenLightbox, onOpenBooking: _onOpenBooking }) {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [
@@ -138,7 +138,7 @@ export default function Portfolio({ onOpenLightbox, onOpenBooking }) {
 
         {/* Portfolio Grid */}
         <div className="portfolio-grid">
-          {filteredItems.map((item, index) => (
+          {filteredItems.map((item) => (
             <div 
               key={item.id} 
               className="portfolio-card"
@@ -173,17 +173,6 @@ export default function Portfolio({ onOpenLightbox, onOpenBooking }) {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="portfolio-cta text-center">
-          <p className="portfolio-note">Have a custom celebration or multi-city destination wedding?</p>
-          <button 
-            className="btn btn-outline-gold"
-            onClick={() => onOpenBooking('Private Gallery Access Request')}
-          >
-            Request Full Private Gallery Access
-          </button>
         </div>
       </div>
     </section>

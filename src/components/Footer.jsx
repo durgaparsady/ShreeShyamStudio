@@ -1,8 +1,9 @@
 import React from 'react';
-import { Video, Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import { STUDIO_CONFIG, getWhatsAppLink } from '../contactConfig';
+import WhatsAppIcon from './WhatsAppIcon';
 
-export default function Footer({ onOpenBooking }) {
+export default function Footer({ onOpenBooking: _onOpenBooking }) {
   return (
     <footer className="site-footer">
       <div className="container footer-container">
@@ -11,7 +12,7 @@ export default function Footer({ onOpenBooking }) {
         <div className="footer-col brand-col">
           <div className="footer-logo">
             <span className="brand-name">SHREE SHYAM</span>
-            <span className="brand-sub">STUDIO &amp; CINEMA</span>
+            <span className="brand-sub">STUDIO</span>
           </div>
           <p className="footer-bio">
             Premier luxury wedding cinema and fine-art photography studio. Dedicated to preserving authentic human emotion in cinematic permanence.
@@ -43,7 +44,7 @@ export default function Footer({ onOpenBooking }) {
               aria-label="WhatsApp Chat"
               title="Chat on WhatsApp"
             >
-              <MessageCircle size={18} />
+              <WhatsAppIcon size={18} />
             </a>
 
             {/* Direct Phone Call */}
@@ -112,7 +113,7 @@ export default function Footer({ onOpenBooking }) {
 
             {/* Click to WhatsApp */}
             <p className="contact-line">
-              <MessageCircle size={16} className="contact-icon text-wa" />
+              <WhatsAppIcon size={16} className="contact-icon text-wa" />
               <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="contact-clickable text-wa">
                 WhatsApp Chat <small>(Instant Reply)</small>
               </a>
