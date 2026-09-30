@@ -55,7 +55,7 @@ export default function FloatingActions() {
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
         </svg>
-        <span className="dock-tooltip">Instagram: @shree_shyam_studios</span>
+        <span className="dock-tooltip">Instagram: @wedding_picturesby_pratham</span>
       </a>
 
       {/* WhatsApp Chat */}
@@ -63,12 +63,12 @@ export default function FloatingActions() {
         href={getWhatsAppLink()} 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="floating-btn btn-wa main-wa"
+        className="floating-btn btn-wa main-wa" 
         aria-label="Chat on WhatsApp"
         title="Instant WhatsApp Consultation"
       >
         <WhatsAppIcon size={26} />
-        <span className="dock-tooltip main-tooltip">Chat with Studio Director</span>
+        <span className="dock-tooltip main-tooltip">Chat with Pratham (Lead Artist)</span>
       </a>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, ArrowRight, Menu, X } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
+import { STUDIO_CONFIG, getWhatsAppLink } from '../contactConfig';
 
 export default function Navbar({ onOpenBooking }) {
   const [scrolled, setScrolled] = useState(false);
@@ -32,16 +33,16 @@ export default function Navbar({ onOpenBooking }) {
         <div className="container top-bar-content">
           <div className="announcement">
             <span className="badge-pulse"></span>
-            <span>Now Booking <strong>2026 – 2027</strong> Wedding Season & Worldwide Destination Tours</span>
+            <span>Now Booking <strong>2026 – 2027</strong> Weddings &amp; Worldwide Destination Tours • By Pratham Gupta</span>
           </div>
           <div className="top-contact">
-            <a href="tel:+916263692215" className="top-link">
+            <a href={`tel:${STUDIO_CONFIG.phoneClean}`} className="top-link">
               <Phone size={13} />
-              <span>+91 96447 46770</span>
+              <span>{STUDIO_CONFIG.phone}</span>
             </a>
             <span className="sep">•</span>
             <a 
-              href="https://wa.me/919644746770?text=Hi%20Shree%20Shyam%20Studio,%20I%20would%20like%20to%20inquire%20about%20booking%20wedding%20coverage." 
+              href={getWhatsAppLink('Hi Wedding Pictures by Pratham, I would like to inquire about booking wedding coverage.')} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="top-link top-wa"
@@ -56,24 +57,13 @@ export default function Navbar({ onOpenBooking }) {
       {/* Primary Sticky Header */}
       <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
         <div className="container header-container">
-          <a href="#hero" className="brand-logo" aria-label="Shree Shyam Studio Home">
+          <a href="#hero" className="brand-logo" aria-label="Wedding Pictures by Pratham Home">
             <div className="logo-mark">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="18" stroke="url(#goldGradNav)" strokeWidth="1.5"/>
-                <polygon points="20,10 27,15 27,25 20,30 13,25 13,15" stroke="#b8860b" strokeWidth="1.2" fill="none"/>
-                <circle cx="20" cy="20" r="4.5" fill="url(#goldGradNav)"/>
-                <defs>
-                  <linearGradient id="goldGradNav" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#d4a017"/>
-                    <stop offset="0.5" stopColor="#b8860b"/>
-                    <stop offset="1" stopColor="#875d0b"/>
-                  </linearGradient>
-                </defs>
-              </svg>
+              <img src="/images/wp_logo.jpg" alt="Wedding Pictures by Pratham" className="logo-img" />
             </div>
             <div className="logo-text">
-              <span className="brand-name">SHREE SHYAM</span>
-              <span className="brand-sub">STUDIO</span>
+              <span className="brand-name">WEDDING PICTURES</span>
+              <span className="brand-sub">BY PRATHAM</span>
             </div>
           </a>
 
@@ -111,9 +101,14 @@ export default function Navbar({ onOpenBooking }) {
       {/* Mobile Drawer Menu */}
       <div className={`mobile-drawer ${drawerOpen ? 'open' : ''}`}>
         <div className="drawer-header">
-          <div className="logo-text">
-            <span className="brand-name">SHREE SHYAM</span>
-            <span className="brand-sub">STUDIO</span>
+          <div className="brand-logo">
+            <div className="logo-mark">
+              <img src="/images/wp_logo.jpg" alt="Wedding Pictures by Pratham" className="logo-img" />
+            </div>
+            <div className="logo-text">
+              <span className="brand-name">WEDDING PICTURES</span>
+              <span className="brand-sub">BY PRATHAM</span>
+            </div>
           </div>
           <button 
             className="drawer-close"
@@ -149,8 +144,9 @@ export default function Navbar({ onOpenBooking }) {
             <ArrowRight size={16} />
           </button>
           <div className="drawer-contact-info">
-            <p><strong>Studio:</strong> Indore Destination Tours</p>
-            <p><strong>Inquiries:</strong> +91 96447 46770</p>
+            <p><strong>Lead Cinematographer:</strong> Pratham Gupta</p>
+            <p><strong>Studio:</strong> Indore &amp; Destination Tours</p>
+            <p><strong>Inquiries:</strong> {STUDIO_CONFIG.phone}</p>
           </div>
         </div>
       </div>

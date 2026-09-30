@@ -14,7 +14,7 @@ export default function Hero({ onOpenShowreel, onOpenBooking: _onOpenBooking }) 
       <div className="container hero-content">
         <div className="hero-badge">
           <Star size={13} className="star-icon" fill="#d4af37" />
-          <span>FINE ART WEDDING CINEMATOGRAPHY & EVENT PRODUCTIONS</span>
+          <span>WEDDING PICTURES BY PRATHAM • LUXURY WEDDING CINEMA &amp; ATELIER</span>
         </div>
 
         <h1 className="hero-title">
@@ -23,7 +23,7 @@ export default function Hero({ onOpenShowreel, onOpenBooking: _onOpenBooking }) 
         </h1>
 
         <p className="hero-description">
-          Capturing royal palace weddings, joyful haldi celebrations, and iconic life milestones across India and world destinations. Powered by Hollywood-grade cinema cameras, master color artistry, and deep human emotion.
+          Directed by Pratham Gupta. Capturing royal palace weddings, joyful haldi celebrations, and iconic life milestones across India and worldwide destinations. Powered by Hollywood-grade cinema cameras, master color artistry, and profound human emotion.
         </p>
 
         <div className="hero-cta-group">
@@ -46,8 +46,8 @@ export default function Hero({ onOpenShowreel, onOpenBooking: _onOpenBooking }) 
         {/* Hero Stats Card */}
         <div className="hero-stats-card">
           <div className="stat-item">
-            <div className="stat-number">100+</div>
-            <div className="stat-label">Weddings & Galas Documented</div>
+            <div className="stat-number">450+</div>
+            <div className="stat-label">Weddings &amp; Galas Documented</div>
           </div>
           <div className="stat-divider" />
           <div className="stat-item">
@@ -56,13 +56,13 @@ export default function Hero({ onOpenShowreel, onOpenBooking: _onOpenBooking }) 
           </div>
           <div className="stat-divider" />
           <div className="stat-item">
-            <div className="stat-number">4K & 8K</div>
-            <div className="stat-label">Cinema & FPV Drone Optics</div>
+            <div className="stat-number">4K &amp; 8K</div>
+            <div className="stat-label">Cinema &amp; FPV Drone Optics</div>
           </div>
           <div className="stat-divider" />
           <div className="stat-item">
-            <div className="stat-number">4.97 ★</div>
-            <div className="stat-label">Client Love (320+ Verified Reviews)</div>
+            <div className="stat-number">4.98 ★</div>
+            <div className="stat-label">Client Love (350+ Verified Reviews)</div>
           </div>
         </div>
       </div>

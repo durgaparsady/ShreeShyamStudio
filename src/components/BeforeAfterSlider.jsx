@@ -44,7 +44,7 @@ export default function BeforeAfterSlider() {
             The Magic of <span className="text-gold">Post-Production</span>
           </h2>
           <p className="section-subtitle">
-            See the transformative difference between unedited camera RAW capture and our signature Shree Shyam fine-art grade. Drag the slider to reveal!
+            See the transformative difference between unedited camera RAW capture and the signature Wedding Pictures by Pratham fine-art grade. Drag the slider to reveal!
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function BeforeAfterSlider() {
                 draggable="false"
               />
               <span className="layer-badge badge-after">
-                ★ SHREE SHYAM SIGNATURE GRADE
+                ★ WEDDING PICTURES BY PRATHAM SIGNATURE GRADE
               </span>
             </div>
 
