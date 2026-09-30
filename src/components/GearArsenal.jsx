@@ -34,12 +34,12 @@ export default function GearArsenal() {
             <div className="gear-img-card">
               <img 
                 src="/images/cinematic_camera.jpg" 
-                alt="Shree Shyam Cinema Camera Rig" 
+                alt="Wedding Pictures by Pratham Cinema Camera Rig" 
                 loading="lazy"
               />
               <div className="gear-glass-badge">
                 <span className="pulse-dot" />
-                <span>PRODUCTION RIG 01: SONY FX6 + MASTER PRIME</span>
+                <span>PRODUCTION RIG 01: SONY FX6 + MASTER PRIME • WEDDING PICTURES</span>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 /* ===================================================================
-   SHREE SHYAM STUDIO  - LUXURY WHITE DESIGN SYSTEM
-   Theme: Fine Art Wedding Atelier Productions
+   WEDDING PICTURES BY PRATHAM - LUXURY WHITE DESIGN SYSTEM
+   Theme: Fine Art Wedding Atelier & Cinema Productions by Pratham Gupta
    =================================================================== */
 
 :root {
@@ -367,23 +367,38 @@ button {
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 13px;
   flex-shrink: 0;
   text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.brand-logo:hover .logo-mark {
+  transform: rotate(12deg) scale(1.05);
 }
 
 .logo-mark {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid var(--gold-primary);
+  background: #000000;
+  box-shadow: 0 3px 12px rgba(184, 134, 11, 0.25);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
-.logo-mark svg {
+.logo-mark svg,
+.logo-mark .logo-img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  transform: scale(1.28);
   display: block;
 }
 
@@ -394,18 +409,19 @@ button {
 
 .brand-name {
   font-family: var(--font-serif);
-  font-size: 1.55rem;
-  letter-spacing: 2.5px;
+  font-size: clamp(1.16rem, 1.4vw, 1.42rem);
+  letter-spacing: 2.2px;
   font-weight: 700;
   color: var(--text-main);
   line-height: 1;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
 .brand-sub {
-  font-size: 0.65rem;
-  letter-spacing: 5px;
-  color: var(--gold-dark);
+  font-size: 0.62rem;
+  letter-spacing: 4px;
+  color: var(--gold-primary);
   font-weight: 700;
   margin-top: 3px;
   text-transform: uppercase;
@@ -2228,179 +2244,364 @@ button {
    =================================================================== */
 .quick-connect-section {
   background: #faf8f5;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  padding: 90px 0;
+  border-top: 1px solid rgba(184, 134, 11, 0.12);
+  border-bottom: 1px solid rgba(184, 134, 11, 0.12);
+  padding: 85px 0 95px;
+}
+
+.inline-sparkle {
+  color: var(--gold-primary);
+  margin-right: 6px;
 }
 
 .connect-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
 }
 
 .connect-card {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 8px 24px rgba(24, 27, 36, 0.04);
+  box-shadow: 0 10px 30px rgba(24, 27, 36, 0.04);
   border-radius: var(--radius-lg);
-  padding: 30px 24px;
+  padding: 26px 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 250px;
+  min-height: 290px;
   transition: all var(--transition-normal);
   position: relative;
-  overflow: hidden;
-  text-decoration: none;
+  overflow: visible;
 }
 
 .connect-card::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 20px;
+  right: 20px;
   height: 3px;
+  border-radius: 0 0 4px 4px;
   background: rgba(0, 0, 0, 0.08);
-  transition: background var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 .connect-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(24, 27, 36, 0.09);
+  box-shadow: 0 22px 50px rgba(24, 27, 36, 0.09);
 }
 
-/* Instagram Theme */
-.connect-card.insta-gradient:hover {
-  border-color: rgba(225, 48, 108, 0.5);
-  box-shadow: 0 20px 45px rgba(225, 48, 108, 0.15);
-}
-.connect-card.insta-gradient::before {
-  background: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-}
-.connect-card.insta-gradient .connect-icon-wrapper {
-  color: #e1306c;
-  background: rgba(225, 48, 108, 0.1);
-  border-color: rgba(225, 48, 108, 0.25);
-}
-
-/* WhatsApp Theme */
-.connect-card.wa-green:hover {
-  border-color: rgba(37, 211, 102, 0.5);
-  box-shadow: 0 20px 45px rgba(37, 211, 102, 0.15);
-}
-.connect-card.wa-green::before {
-  background: #25d366;
-}
-.connect-card.wa-green .connect-icon-wrapper {
-  color: #16a34a;
-  background: rgba(37, 211, 102, 0.1);
-  border-color: rgba(37, 211, 102, 0.25);
-}
-
-/* Phone Theme */
-.connect-card.phone-gold:hover {
-  border-color: var(--gold-primary);
-  box-shadow: 0 20px 45px rgba(184, 134, 11, 0.15);
-}
-.connect-card.phone-gold::before {
-  background: var(--gold-primary);
-}
-.connect-card.phone-gold .connect-icon-wrapper {
-  color: #a87819;
-  background: rgba(184, 134, 11, 0.1);
-  border-color: rgba(184, 134, 11, 0.25);
-}
-
-/* Mail Theme */
-.connect-card.mail-blue:hover {
-  border-color: rgba(2, 132, 199, 0.5);
-  box-shadow: 0 20px 45px rgba(2, 132, 199, 0.15);
-}
-.connect-card.mail-blue::before {
-  background: #0284c7;
-}
-.connect-card.mail-blue .connect-icon-wrapper {
-  color: #0284c7;
-  background: rgba(2, 132, 199, 0.1);
-  border-color: rgba(2, 132, 199, 0.25);
-}
-
-.connect-card-top {
+/* Card Header */
+.connect-card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
 }
 
 .connect-icon-wrapper {
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.connect-arrow {
-  color: #94a3b8;
+  flex-shrink: 0;
   transition: all var(--transition-fast);
 }
 
-.connect-card:hover .connect-arrow {
-  color: var(--text-main);
-  transform: translate(3px, -3px);
+.connect-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #64748b;
+  white-space: nowrap;
 }
 
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #94a3b8;
+}
+
+/* Instagram Theme */
+.connect-card.theme-insta:hover {
+  border-color: rgba(225, 48, 108, 0.4);
+  box-shadow: 0 22px 50px rgba(225, 48, 108, 0.14);
+}
+.connect-card.theme-insta::before {
+  background: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+.connect-card.theme-insta .connect-icon-wrapper {
+  color: #e1306c;
+  background: rgba(225, 48, 108, 0.08);
+  border-color: rgba(225, 48, 108, 0.22);
+}
+.connect-card.theme-insta .status-dot {
+  background: #e1306c;
+  box-shadow: 0 0 8px rgba(225, 48, 108, 0.6);
+}
+
+/* WhatsApp Theme */
+.connect-card.theme-wa:hover {
+  border-color: rgba(37, 211, 102, 0.4);
+  box-shadow: 0 22px 50px rgba(37, 211, 102, 0.14);
+}
+.connect-card.theme-wa::before {
+  background: #25d366;
+}
+.connect-card.theme-wa .connect-icon-wrapper {
+  color: #16a34a;
+  background: rgba(37, 211, 102, 0.08);
+  border-color: rgba(37, 211, 102, 0.22);
+}
+.connect-card.theme-wa .status-dot {
+  background: #25d366;
+  box-shadow: 0 0 8px rgba(37, 211, 102, 0.6);
+}
+
+/* Phone Theme */
+.connect-card.theme-phone:hover {
+  border-color: var(--gold-border);
+  box-shadow: 0 22px 50px rgba(184, 134, 11, 0.14);
+}
+.connect-card.theme-phone::before {
+  background: var(--gold-primary);
+}
+.connect-card.theme-phone .connect-icon-wrapper {
+  color: #a87819;
+  background: rgba(184, 134, 11, 0.08);
+  border-color: rgba(184, 134, 11, 0.22);
+}
+.connect-card.theme-phone .status-dot {
+  background: var(--gold-primary);
+  box-shadow: 0 0 8px rgba(184, 134, 11, 0.6);
+}
+
+/* Email Theme */
+.connect-card.theme-email:hover {
+  border-color: rgba(2, 132, 199, 0.4);
+  box-shadow: 0 22px 50px rgba(2, 132, 199, 0.14);
+}
+.connect-card.theme-email::before {
+  background: #0284c7;
+}
+.connect-card.theme-email .connect-icon-wrapper {
+  color: #0284c7;
+  background: rgba(2, 132, 199, 0.08);
+  border-color: rgba(2, 132, 199, 0.22);
+}
+.connect-card.theme-email .status-dot {
+  background: #0284c7;
+  box-shadow: 0 0 8px rgba(2, 132, 199, 0.6);
+}
+
+/* Card Body */
 .connect-card-body {
-  margin: 20px 0 16px;
+  margin-bottom: 20px;
 }
 
-.connect-label {
-  font-size: 0.74rem;
+.connect-channel-label {
+  font-size: 0.72rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #64748b;
-  font-weight: 600;
+  font-weight: 700;
   display: block;
   margin-bottom: 4px;
 }
 
-.connect-handle {
-  font-size: 1.15rem;
+.connect-headline {
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--text-main);
-  font-weight: 600;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   line-height: 1.3;
+}
+
+/* Full Width Handle Pill with Copy Button */
+.connect-pill-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 7px 10px;
+  margin-bottom: 10px;
+  gap: 8px;
+  transition: all var(--transition-fast);
+}
+
+.connect-card:hover .connect-pill-wrapper {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.connect-handle-text {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.25;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+.copy-mini-btn {
+  background: transparent;
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.copy-mini-btn:hover {
+  color: var(--text-main);
+  background: #f1f5f9;
 }
 
 .connect-sub {
   font-size: 0.8rem;
   color: #64748b;
-  line-height: 1.4;
+  line-height: 1.45;
+  margin: 0;
 }
 
+/* Footer Link Button */
 .connect-card-footer {
   margin-top: auto;
 }
 
-.action-pill {
-  display: inline-flex;
+.action-btn-link {
+  display: flex;
   align-items: center;
-  padding: 6px 14px;
-  background: #f1f5f9;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 16px;
+  background: #f8fafc;
   border: 1px solid #e2e8f0;
-  border-radius: 20px;
-  font-size: 0.8rem;
+  border-radius: 10px;
+  font-size: 0.84rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--text-main);
+  text-decoration: none;
   transition: all var(--transition-fast);
 }
 
-.connect-card:hover .action-pill {
+.connect-card:hover .action-btn-link {
   background: var(--text-main);
   color: #ffffff;
+  border-color: var(--text-main);
+}
+
+.action-arrow {
+  transition: transform var(--transition-fast);
+}
+
+.connect-card:hover .action-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* ===================================================================
+   BOOKING MODAL SUCCESS STATE
+   =================================================================== */
+.booking-success-view {
+  padding: 20px 8px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.success-badge-icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.success-desc {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 440px;
+}
+
+.dispatch-summary-box {
+  width: 100%;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.86rem;
+  gap: 12px;
+}
+
+.summary-label {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.summary-val {
+  color: var(--text-main);
+  font-weight: 600;
+  text-align: right;
+  word-break: break-all;
+}
+
+.success-action-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inline-pin {
+  margin-right: 4px;
+  vertical-align: -1px;
+}
+
+.btn-outline {
+  background: #ffffff;
+  color: #334155;
+  border: 1.5px solid #cbd5e1;
+}
+
+.btn-outline:hover {
+  background: #f8fafc;
+  color: #0f172a;
+  border-color: #94a3b8;
 }
 
 /* ===================================================================
@@ -2537,8 +2738,15 @@ button {
 
 .footer-logo {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 16px;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 20px;
+}
+
+.footer-mark {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
 }
 
 .footer-bio {
@@ -2812,6 +3020,22 @@ button {
   margin-top: 10px;
 }
 
+.form-error {
+  padding: 12px 14px;
+  border: 1px solid #fca5a5;
+  border-radius: var(--radius-sm);
+  background: #fff1f2;
+  color: #991b1b;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.form-error a {
+  color: #7f1d1d;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 .direct-wa-link {
   color: var(--accent-wa);
   font-weight: 600;
@@ -2871,6 +3095,13 @@ button {
 /* ===================================================================
    RESPONSIVE DESIGN (MEDIA QUERIES)
    =================================================================== */
+@media (max-width: 1240px) {
+  .connect-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
 @media (max-width: 1120px) {
   .nav-menu { display: none; }
   .mobile-toggle { display: flex; }
@@ -2932,14 +3163,14 @@ button {
     height: 36px;
   }
   .brand-name {
-    font-size: 1.25rem;
-    letter-spacing: 1.5px;
+    font-size: 1.14rem;
+    letter-spacing: 1.4px;
   }
   .brand-sub {
-    font-size: 0.55rem;
-    letter-spacing: 4px;
+    font-size: 0.54rem;
+    letter-spacing: 3px;
   }
-  .booking-modal-card {
+  .booking-dialog {
     padding: 30px 22px;
   }
   .modal-title {
@@ -2962,12 +3193,12 @@ button {
     height: 32px;
   }
   .brand-name {
-    font-size: 1.08rem;
+    font-size: 0.98rem;
     letter-spacing: 1px;
   }
   .brand-sub {
-    font-size: 0.5rem;
-    letter-spacing: 3px;
+    font-size: 0.48rem;
+    letter-spacing: 2.2px;
     margin-top: 2px;
   }
   .header-actions {
@@ -3110,7 +3341,7 @@ button {
     gap: 14px;
     text-align: center;
   }
-  .booking-modal-card {
+  .booking-dialog {
     padding: 24px 16px;
     border-radius: var(--radius-md);
   }
@@ -3127,16 +3358,16 @@ button {
 
 @media (max-width: 370px) {
   .brand-name {
-    font-size: 0.98rem;
+    font-size: 0.84rem;
     letter-spacing: 0.6px;
   }
   .brand-sub {
-    font-size: 0.46rem;
-    letter-spacing: 2.2px;
+    font-size: 0.42rem;
+    letter-spacing: 1.6px;
   }
   .logo-mark {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
   }
   .header-booking-btn {
     padding: 5px 8px !important;

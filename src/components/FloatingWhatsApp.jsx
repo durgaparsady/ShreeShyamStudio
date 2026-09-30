@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
+import { getWhatsAppLink } from '../contactConfig';
 
 export default function FloatingWhatsApp() {
   const [showScroll, setShowScroll] = useState(false);
@@ -30,14 +31,14 @@ export default function FloatingWhatsApp() {
 
       {/* WhatsApp Button */}
       <a 
-        href="https://wa.me/919644746770?text=Hi%20Shree%20Shyam%20Studio,%20I%20am%20interested%20in%20wedding%20photography%20and%20films." 
+        href={getWhatsAppLink('Hi Wedding Pictures by Pratham, I am interested in wedding photography and films.')} 
         target="_blank" 
         rel="noopener noreferrer" 
         className="floating-wa"
         aria-label="Chat on WhatsApp"
       >
         <WhatsAppIcon size={30} />
-        <span className="floating-wa-tooltip">Quick Chat with Director</span>
+        <span className="floating-wa-tooltip">Quick Chat with Pratham</span>
       </a>
     </>
   );

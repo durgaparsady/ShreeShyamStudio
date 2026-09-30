@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
+import { getWhatsAppLink } from '../contactConfig';
 
 export default function CtaBanner({ onOpenBooking }) {
   return (
@@ -14,7 +15,7 @@ export default function CtaBanner({ onOpenBooking }) {
               Let’s Make It <span className="text-gold">Unforgettable</span>.
             </h2>
             <p className="cta-sub">
-              Check our calendar availability or connect directly with our studio director on WhatsApp for an immediate consultation.
+              Check our calendar availability or connect directly with lead cinematographer Pratham Gupta on WhatsApp for an immediate consultation.
             </p>
 
             <div className="cta-buttons">
@@ -27,7 +28,7 @@ export default function CtaBanner({ onOpenBooking }) {
               </button>
 
               <a 
-                href="https://wa.me/919644746770?text=Hi%20Shree%20Shyam%20Studio,%20I%20would%20like%20to%20inquire%20about%20booking%20wedding%20coverage." 
+                href={getWhatsAppLink('Hi Wedding Pictures by Pratham, I would like to inquire about booking wedding coverage.')} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-whatsapp btn-lg"

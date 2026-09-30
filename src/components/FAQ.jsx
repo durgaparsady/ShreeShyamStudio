@@ -27,7 +27,7 @@ export default function FAQ({ onOpenBooking: _onOpenBooking }) {
     },
     {
       q: 'Do you also shoot corporate conferences, galas, and fashion campaigns?',
-      a: 'Yes! In addition to weddings, Shree Shyam Studio manages commercial brand shoots, luxury gala evenings, corporate annual summits, and fashion editorial lookbooks with dedicated commercial lighting teams.'
+      a: 'Yes! In addition to weddings, Wedding Pictures by Pratham manages commercial brand shoots, luxury gala evenings, corporate annual summits, and fashion editorial lookbooks with dedicated commercial lighting teams led by Pratham Gupta.'
     }
   ];
 
